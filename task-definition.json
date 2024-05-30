@@ -6,26 +6,26 @@
             "secrets": [
                 {
                     "name": "PREFECT_API_URL",
-                    "valueFrom": "arn:aws:ssm:us-east-1:338306982838:parameter/PREFECT_API_URL"
+                    "valueFrom": "arn:aws:ssm:ap-southeast-1:381492267870:parameter/PREFECT_API_URL"
                 },
                 {
                     "name": "PREFECT_API_KEY",
-                    "valueFrom": "arn:aws:ssm:us-east-1:338306982838:parameter/PREFECT_API_KEY"
+                    "valueFrom": "arn:aws:ssm:ap-southeast-1:381492267870:parameter/PREFECT_API_KEY"
                 }
             ],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-group": "realtime-poc",
-                    "awslogs-region": "us-east-1",
+                    "awslogs-region": "ap-southeast-1",
                     "awslogs-stream-prefix": "realtime-poc"
                 }
             }
         }
     ],
     "family": "realtime-poc",
-    "taskRoleArn": "arn:aws:iam::338306982838:role/realtime-poc_ecs_task_role",
-    "executionRoleArn": "arn:aws:iam::338306982838:role/realtime-poc_ecs_execution_role",
+    "taskRoleArn": "arn:aws:iam::381492267870:role/PrefectEcsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::381492267870:role/PrefectEcsTaskExecutionRole",
     "networkMode": "awsvpc",
     "requiresCompatibilities": [
         "FARGATE"
